@@ -9,9 +9,10 @@ import { Listing, Reservation } from "@prisma/client";
 import useCountries from "@/app/hooks/useCountries";
 import { useCallback, useMemo } from "react";
 import Button from "../Button";
+import { SafeListings } from "../../types/index";
 
 interface ListingCardProps {
-  data: Listing;
+  data: SafeListings;
   reservation?: Reservation;
   onAction?: (id: string) => void;
   disabled?: boolean;
